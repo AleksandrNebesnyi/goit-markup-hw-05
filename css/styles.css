@@ -28,11 +28,10 @@ img {
   height: auto;
 }
 .container {
- box-sizing: border-box;
-  margin:0 auto;
+  box-sizing: border-box;
+  margin: 0 auto;
   width: 1200px;
   padding: 94px 15px;
-  
 }
 
 .list {
@@ -76,7 +75,6 @@ img {
   align-items: center;
 }
 .nav-link {
-  position: relative;
   margin-left: 93px;
 }
 
@@ -95,33 +93,34 @@ img {
   line-height: 1.1;
   letter-spacing: 0.02em;
   text-decoration: none;
-  transition:color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
- }
-
- .nav-link .item a::after{
-  
-  content:"" ;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.nav-link .item a {
+  position: relative;
+}
+.nav-link a::after {
+  content: "";
   position: absolute;
   width: 100%;
-  height: 10px;
+  height: 4px;
   left: 0;
   bottom: 0;
-  background-color:var(--accent-color);
-  opacity: 1;
+  background-color: var(--accent-color);
+  opacity: 0;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-
- }
+}
 
 .nav-link .link.current {
   color: var(--accent-color);
+}
 
+.nav-link a:hover::after {
+  opacity: 1;
 }
 
 .nav-link a:hover,
 .nav-link a:focus {
   color: var(--accent-color);
-  /* opacity: 1; */
 }
 
 .nav-information {
@@ -149,14 +148,12 @@ img {
   display: inline-flex;
   align-items: center;
   color: var(--primery-text-color);
-  transition:color 250ms  cubic-bezier(0.4, 0, 0.2, 1); 
-
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-information-list:hover,
 .nav-information-list:focus {
   color: var(--accent-color);
-  
 }
 
 .nav-information-icon {
@@ -217,7 +214,8 @@ img {
   padding: 10px 35px;
   border: 1px solid transparent;
   min-width: 130px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms  cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-hero:hover,
 .button-hero:focus {
@@ -356,7 +354,6 @@ img {
   padding-left: 30px;
   padding-right: 30px;
   margin-bottom: 30px;
-  
 }
 
 .team-icon {
@@ -367,7 +364,8 @@ img {
   height: 44px;
   fill: #afb1b8;
   border-radius: 50%;
-  transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-icon:not(:last-child) {
@@ -413,14 +411,14 @@ img {
   border-radius: 4px;
 
   cursor: pointer;
-  transition:border-color 250ms  cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .regular-client-link {
   display: block;
   padding: 16px 32px;
   fill: #afb1b8;
-  transition:fill 250ms  cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .regular-client-item:not(:last-child) {
   margin-right: 30px;
@@ -454,7 +452,6 @@ img {
 
   padding-bottom: 60px;
   margin-right: 70px;
-   
 }
 
 .footer-logo {
@@ -470,14 +467,12 @@ img {
   color: var(--wite-color);
 }
 
-.footer-list a { 
-transition:color 250ms  cubic-bezier(0.4, 0, 0.2, 1);
+.footer-list a {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-list li {
   color: var(--wite-color);
   line-height: 1.7;
- 
-  
 }
 .footer-list li:not(:last-child) {
   margin-bottom: 9px;
@@ -553,7 +548,9 @@ transition:color 250ms  cubic-bezier(0.4, 0, 0.2, 1);
   padding: 6px 22px;
   border: 1px solid transparent;
   min-width: 73px;
-  transition:color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-list li:not(:last-child) {
   margin-right: 8px;
@@ -581,7 +578,6 @@ transition:color 250ms  cubic-bezier(0.4, 0, 0.2, 1);
 
 .project .card {
   border: 1px solid #eeeeee;
-  
 }
 
 .project > .card {
@@ -590,62 +586,58 @@ transition:color 250ms  cubic-bezier(0.4, 0, 0.2, 1);
   margin-top: var(--card-set-gap);
 }
 
-
 .card-image {
   margin-bottom: 20px;
 }
 
-.card-image .a{
-   display: block;
+.card-image .a {
+  display: block;
 }
 
 .card-image {
- position: relative;
- 
+  position: relative;
 }
 
 .card-image::before {
-display: inline-block;
-content: "";
-position: absolute;
-background-color: rgba(33, 150, 243, 0.9);
-top: 0;
-left: 0;
-width:100%;
-height: 100%;
-opacity: 0;
-transform: translateY(100%);
-transition:opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-block;
+  content: "";
+  position: absolute;
+  background-color: rgba(33, 150, 243, 0.9);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 250ms 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
-
-.card-image:hover::before  {
+.card-image:hover::before {
   transform: translateY(0);
   opacity: 1;
 }
-
 
 .card-text-hover {
   display: block;
   position: absolute;
   content: "";
-   
+
   top: 0;
-  left:0;
-  margin: 0px; 
+  left: 0;
+  margin: 0px;
   padding: 63px 24px;
- 
+
   font-size: 18px;
   line-height: 1.56;
   opacity: 0;
-  transition:opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   color: var(--secondary-text-color);
-  }
-  .card-image:hover .card-text-hover {
-      opacity: 1;
-  }
+}
+.card-image:hover .card-text-hover {
+  opacity: 1;
+}
 
 .project-title {
   padding: 0;
@@ -657,7 +649,7 @@ transition:opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms 500ms cub
   letter-spacing: 0.05em;
   text-decoration: none;
 
-   color: var(--secondary-text-color);
+  color: var(--secondary-text-color);
 }
 
 .project-description {
@@ -690,7 +682,6 @@ transition:opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms 500ms cub
 }
 
 .backdrop.is-hidden {
-  
   opacity: 0;
   pointer-events: none;
 }
@@ -715,7 +706,7 @@ transition:opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms 500ms cub
   background-color: aqua;
   width: 30px;
   height: 30px;
-  
+
   cursor: pointer;
   border-radius: 50px;
   /* padding: 6px 22px; */
